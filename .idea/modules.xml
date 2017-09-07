@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EcarUtil20160811.iml" filepath="$PROJECT_DIR$/EcarUtil20160811.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TechUtil.iml" filepath="$PROJECT_DIR$/TechUtil.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ecarutils/ecarutils.iml" filepath="$PROJECT_DIR$/ecarutils/ecarutils.iml" />
       <module fileurl="file://$PROJECT_DIR$/ecarutils/ecarutils.iml" filepath="$PROJECT_DIR$/ecarutils/ecarutils.iml" />
     </modules>
   </component>
