@@ -4,7 +4,7 @@ package urils.ecaray.com.ecarutils.Utils;
 import com.orhanobut.logger.Logger;
 
 //log打印
-public class TagUtil {
+public class PTagUtil {
 
 
     /**

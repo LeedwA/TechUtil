@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initLoger() {
         Logger
-                .init("TagUtil")               // default tag : 默认的tag
+                .init("PTagUtil")               // default tag : 默认的tag
                 .setMethodCount(2)            // 打印的方法深度层级
                 .hideThreadInfo()         // 是否隐藏当前执行的线程类型
                 .setLogLevel(IS_DEBUG ? LogLevel.FULL : LogLevel.NONE);  // 是否开启log    LogLevel.FULL：开启    LogLevel.NONE：关闭
