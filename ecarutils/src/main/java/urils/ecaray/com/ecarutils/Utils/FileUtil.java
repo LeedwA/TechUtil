@@ -30,9 +30,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.zip.CRC32;
 import java.util.zip.CheckedInputStream;
+
 /**
  * 类描述：文件操作工具类
- *<p>
+ * <p>
  */
 public class FileUtil {
     private static final String TAG = FileUtil.class.getSimpleName();
@@ -175,7 +176,8 @@ public class FileUtil {
 
     /**
      * 从指定文件读取 JSON 字符串
-     *    <P>
+     * <p>
+     *
      * @param filepath
      * @return
      */
@@ -210,7 +212,8 @@ public class FileUtil {
 
     /**
      * 保存图片到制定路径
-     *      <P>
+     * <p>
+     *
      * @param filepath
      * @param bitmap
      */
@@ -325,7 +328,8 @@ public class FileUtil {
 
     /**
      * 删除指定的 图片
-     *   <P>
+     * <p>
+     *
      * @param filepath
      * @return
      */
@@ -349,7 +353,7 @@ public class FileUtil {
     private static String storagePath = "";
 
 
-    /**   <P>
+    /**
      * @throws Exception
      * @功能：yuv转prg
      * @param：
@@ -515,10 +519,10 @@ public class FileUtil {
     }
 
 
-
     /**
      * 读取文件中字符串
-     *    <P>
+     * <p>
+     *
      * @param file 目标文件
      * @return 结果字符
      */
@@ -542,7 +546,8 @@ public class FileUtil {
 
     /**
      * 向文件写入数据
-     *     <P>
+     * <p>
+     *
      * @param file 目标文件
      * @param data 字符数据
      */
@@ -557,7 +562,8 @@ public class FileUtil {
 
     /**
      * 将输入流转成输出流
-     *     <P>
+     * <p>
+     *
      * @param is
      * @param os
      */
@@ -579,7 +585,8 @@ public class FileUtil {
 
     /**
      * 读取输入数据流
-     *  <P>
+     * <p>
+     *
      * @param is 输入流
      * @return 字节流
      */
@@ -693,23 +700,23 @@ public class FileUtil {
      * @param (sd卡不可用时返回cache路径)
      * @return
      ****************************************/
-    public static String getSdPatch(Activity activity) {
+    public static String getSdPatch(Context context) {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             return Environment.getExternalStorageDirectory().getAbsolutePath().toString();
         } else {
-            String patch=null;
-            if (TextUtils.isEmpty(patch = getCanUsePatch(activity))) {
-                return activity.getCacheDir().getAbsolutePath();
-            } else{
+            String patch = null;
+            if (TextUtils.isEmpty(patch = getCanUsePatch(context))) {
+                return context.getCacheDir().getAbsolutePath();
+            } else {
                 return patch;
             }
         }
 
     }
 
-     //获取当前可用的sd卡路径
-    private static String getCanUsePatch(Activity activity) {
-        StorageManager mStorageManager = (StorageManager) activity
+    //获取当前可用的sd卡路径
+    private static String getCanUsePatch(Context context) {
+        StorageManager mStorageManager = (StorageManager) context
                 .getSystemService(Activity.STORAGE_SERVICE);
         Method method = null;
         try {

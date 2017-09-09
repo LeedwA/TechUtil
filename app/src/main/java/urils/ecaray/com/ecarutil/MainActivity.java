@@ -15,7 +15,9 @@ import com.orhanobut.logger.Logger;
 
 import rxbus.ecaray.com.rxbuslib.rxbus.RxBus;
 import rxbus.ecaray.com.rxbuslib.rxbus.RxBusReact;
+import urils.ecaray.com.ecarutils.Utils.FileUtil;
 import urils.ecaray.com.ecarutils.Utils.NetUtils;
+import urils.ecaray.com.ecarutils.Utils.PTagUtil;
 import urils.ecaray.com.ecarutils.Utils.SignUtils;
 import urils.ecaray.com.ecarutils.Utils.ToastUtils;
 import urils.ecaray.com.ecarutils.Utils.receive.NetConnectReceive;
@@ -34,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         RxBus.getDefault().register(this);
         NetUtils.init(RxBus.getDefault(), this);
 
-        //检查签名  防止第二次打包
-        if (!SignUtils.getSignInfo(this, -916382879)) {
-            System.exit(0);
-        }
+//        //检查签名  防止第二次打包
+//        if (!SignUtils.getSignInfo(this, -916382879)) {
+//            System.exit(0);
+//        }
         //判断代理-防止截包
         Toast.makeText(this, "是否是代理" + NetUtils.isWifiProxy(this), Toast.LENGTH_SHORT).show();
 
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        PTagUtil.d(FileUtil.getSdPatch(getApplicationContext()));
     }
 
     @RxBusReact(clazz = Boolean.class, tag = NetConnectReceive.Tags.NET_CONNECT)
