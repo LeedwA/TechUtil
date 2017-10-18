@@ -19,7 +19,6 @@ import urils.ecaray.com.ecarutils.Utils.FileUtil;
 import urils.ecaray.com.ecarutils.Utils.NetUtils;
 import urils.ecaray.com.ecarutils.Utils.PTagUtil;
 import urils.ecaray.com.ecarutils.Utils.SignUtils;
-import urils.ecaray.com.ecarutils.Utils.ToastUtils;
 import urils.ecaray.com.ecarutils.Utils.receive.NetConnectReceive;
 import urils.ecaray.com.ecarutils.Utils.security.KeyStoreUtils;
 
@@ -99,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 .hideThreadInfo()         // 是否隐藏当前执行的线程类型
                 .setLogLevel(IS_DEBUG ? LogLevel.FULL : LogLevel.NONE);  // 是否开启log    LogLevel.FULL：开启    LogLevel.NONE：关闭
 
-        ToastUtils.init(getApplication()); //初始化吐司工具
+//        ToastUtils.init(getApplication()); //初始化吐司工具
     }
 
     @Override
