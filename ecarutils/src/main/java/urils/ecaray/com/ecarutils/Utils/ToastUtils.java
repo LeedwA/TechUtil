@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -139,6 +140,8 @@ class ToastUtils {
      * @param duration 时长
      */
     private static Toast showToast(final Context context, final String text, final int duration) {
+        if (TextUtils.isEmpty(text)) return null;
+
         if (context == null) {
             return null;
         }
@@ -180,6 +183,7 @@ class ToastUtils {
      * @param duration 时长
      */
     private static Toast showToast(final String text, final int duration) {
+        if (TextUtils.isEmpty(text)) return null;
         if (appContext == null) {
             Log.e("ToastUtil", "未初始化ToastUtil");
             return null;

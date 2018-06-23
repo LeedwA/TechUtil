@@ -17,7 +17,6 @@ import rxbus.ecaray.com.rxbuslib.rxbus.RxBus;
 import rxbus.ecaray.com.rxbuslib.rxbus.RxBusReact;
 import urils.ecaray.com.ecarutils.Utils.FileUtil;
 import urils.ecaray.com.ecarutils.Utils.NetUtils;
-import urils.ecaray.com.ecarutils.Utils.PTagUtil;
 import urils.ecaray.com.ecarutils.Utils.SignUtils;
 import urils.ecaray.com.ecarutils.Utils.receive.NetConnectReceive;
 import urils.ecaray.com.ecarutils.Utils.security.KeyStoreUtils;
@@ -72,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        PTagUtil.d(FileUtil.getSdPatch(getApplicationContext()));
     }
 
     @RxBusReact(clazz = Boolean.class, tag = NetConnectReceive.Tags.NET_CONNECT)

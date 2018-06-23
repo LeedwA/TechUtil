@@ -27,4 +27,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(path: ':ecarutils')
     compile 'com.android.support:appcompat-v7:24.0.0'
+    compile "com.github.TopTech666:TechRxbus:1.2.1"
+
 }
